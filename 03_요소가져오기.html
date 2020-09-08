@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소가져오기(접근하기)</title>
+    <style>
+        .area{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML 요소에 접근하기 (해당 요소 가져오기)</h1>
+    
+    <h3>1) 아이디로 접근하기</h3>
+
+    <div id="area1" class="area"></div>
+    <button onclick="accessId();">아이디로 접근</button>
+
+    <script>
+        function accessId(){
+            // 아이디로 요소에 접근할 때
+            // document.getElementById("아이디명")
+
+            var area1 = document.getElementById("area1");
+
+            // 선택된 요소에 속성들에 접근해서 값을 가져오는 것 및 변경하는 것 가능
+            // 선택된요소.속성명
+            // area1.innerHTML = area1.innerHTML + "아이디로 접근 성공!";
+            area1.innerHTML += "아이디로 접근 성공! <br>";
+
+            // 선택된 요소에 스타일 변경
+            area1.style.backgroundColor = "yellow";
+            area1.style.color = "red";
+            area1.style.width = "100px";
+            area1.style.height = "200px";
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
