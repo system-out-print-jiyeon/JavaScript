@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습5</title>
+</head>
+<body>
+    <h1>간이 계산기 만들기</h1>
+
+    첫번째 값 : 
+    <input type="number" id="num1">
+    <br>
+    두번째 값 : 
+    <input type="number" id="num2">
+    <br>
+    <button onclick="calculator(this.value);" value="+">+</button>
+    <button onclick="calculator(this.value);" value="-">-</button>
+    <button onclick="calculator(this.value);" value="x">x</button>
+    <button onclick="calculator(this.value);" value="/">/</button>
+    <button onclick="calculator(this.value);" value="%">%</button>
+
+    <br><br>
+
+    계산결과 : <label id="area"></label>
+    <hr>
+
+    참고 : 각 연산 (+, -, *, /, %)들의 버튼들은 input type="button"으로 작업하시오. 
+    <br><br>
+    <b>Hint</b>
+    <br>
+    1. 함수에 인자값을 넘길 경우 함수 처리 방법 <br>
+    ex) -> onclick="calculator(this.value)";와 같이 <br>
+               해당 태그의 value값을 함수에 인자값으로 넘길 수 있음<br><br>
+        -> function calculator(val) { val을 통해 조건처리 } 처리 할 수 있음 <br><br>
+    2. switch 문은 자바에서 사용한 switch문과 동일합니다.
+
+    <script>
+        function calculator(val){
+
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+
+            area = document.getElementById("area");
+            result = 0;
+            
+            switch(val){
+                case "+" : result = num1 + num2; break;
+                case "-" : result = num1 - num2; break;
+                case "x" : result =num1 * num2; break;
+                case "/" : result =num1 / num2; break;
+                case "%" : result =num1 % num2; break;
+            }
+
+            area.innerHTML = result;
+
+             
+        }
+
+    </script>
+
+
+
+
+
+
+    
+</body>
+</html>
