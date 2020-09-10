@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습8</title>
+    <style>
+        #area{
+            border: 1px solid red;
+            width: 1000px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>배열 실습 문제3</h1>
+    <p>
+        문자열을 여러 개 입력 받은 후 출력 버튼 클릭시 입력했던 모든 문자열이 출력되도록 만드세요. <br>
+        예) 개구리 -> 입력, 바나나 -> 입력, 복숭아 -> 입력 <br>
+        출력 : 개구리,바나나,복숭아
+    </p>
+
+    <fieldset>
+        <legend>입력</legend>
+        <input type="text" id="text">
+        <button onclick="inputTest();">입력</button>
+    </fieldset>
+
+    <br><br>
+
+    <div id="area">이 부분에 정답이 출력 될 수 있도록 하세요</div>
+    <br>
+    <button onclick="outputTest();">출력</button>
+
+    <script>
+        var arr = [];
+
+        function inputTest(){
+            var input = document.getElementById("text").value;
+
+            arr.push(input);
+        }
+
+
+        function outputTest(){
+            var area = document.getElementById("area");
+
+            area.innerHTML = arr.toString();
+        }
+    </script>
+
+
+
+
+    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+</body>
+</html>
